@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Application.Features.ProductFeatures.Queries
+namespace Application.Features.ProductFeatures.Queries.Orders
 {
     public class GetAllOrdersQuery : IRequest<IEnumerable<Order>>
     {

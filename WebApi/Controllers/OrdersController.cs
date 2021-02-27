@@ -1,4 +1,4 @@
-﻿using Application.Features.ProductFeatures.Queries;
+﻿using Application.Features.ProductFeatures.Queries.Orders;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -30,6 +30,7 @@ namespace WebApi.Controllers
         [HttpGet("{date}")]
         public async Task<IActionResult> GetOrdersByDate(DateTime date)
         {
+            
             return Ok(await Mediator.Send(new GetOrdersByDateQuery { Date = date }));
         }
 

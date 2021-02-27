@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
-namespace Application.Features.ProductFeatures.Queries
+namespace Application.Features.ProductFeatures.Queries.Orders
 {
     public class GetOrdersByDateQuery : IRequest<IEnumerable<Order>>
     {

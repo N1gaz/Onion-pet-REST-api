@@ -7,8 +7,8 @@ namespace DomainModel.Entities
 {
     public class Customer : BaseEntity
     {
-        public string CustomrName { get; set; }
-        public string CutomerSurname { get; set; }
+        public string CustomerName { get; set; }
+        public string CustomerSurname { get; set; }
         public List<Order> Orders { get; set; }
     }
 }
