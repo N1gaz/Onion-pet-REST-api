@@ -9,5 +9,10 @@
     <ProjectReference Include="..\Persistence\Persistence.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\html\pages\" />
+    <Folder Include="wwwroot\html\partial\" />
+  </ItemGroup>
+
 
 </Project>
