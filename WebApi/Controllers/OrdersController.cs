@@ -31,7 +31,7 @@ namespace WebApi.Controllers
         public async Task<IActionResult> GetOrdersByDate(DateTime date)
         {
             
-            return Ok(await Mediator.Send(new GetOrdersByDateQuery { Date = date }));
+            return Ok(await Mediator.Send(new GetOrdersByDateQuery { DateTime = date }));
         }
 
     }

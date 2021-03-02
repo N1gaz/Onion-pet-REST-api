@@ -1,2 +1,20 @@
-﻿body {
+﻿*{
+    margin:0;
+    padding:0;
 }
+
+body {
+}
+
+.customer-search {
+    display:none;
+}
+
+.date-search{
+    display:none;
+}
+
+.search-btn {
+    display: none;
+}
+

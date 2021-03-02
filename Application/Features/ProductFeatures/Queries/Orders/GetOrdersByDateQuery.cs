@@ -12,7 +12,7 @@ namespace Application.Features.ProductFeatures.Queries.Orders
 {
     public class GetOrdersByDateQuery : IRequest<IEnumerable<Order>>
     {
-        public DateTime Date { get; set; }
+        public DateTime DateTime { get; set; }
 
         public class GetOrdersByDateQueryHandler : IRequestHandler<GetOrdersByDateQuery, IEnumerable<Order>>
         {
@@ -25,7 +25,7 @@ namespace Application.Features.ProductFeatures.Queries.Orders
 
             public async Task<IEnumerable<Order>> Handle(GetOrdersByDateQuery request, CancellationToken cancellationToken)
             {
-                var ordersList = await _context.Orders.Where(a => a.OrderDate.Equals(request.Date)).ToListAsync();
+                var ordersList = await _context.Orders.Where(a => a.OrderDate.Date.Equals(request.DateTime.Date)).ToListAsync();
                 if (ordersList == null)
                 {
                     return null;

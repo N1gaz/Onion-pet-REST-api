@@ -2,21 +2,45 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <link href="../css/site.css" type="text/css" rel="stylesheet" />
     <title> Заказы</title>
 </head>
 <body>
     <div class="container-body-content">
         <div class="search-form-container">
             <form>
-                <label >Искать по потреблителю<input name="search-prop" type="radio" value="customers"/></label>
-                <label >Искать по дате<input name="search-prop" type="radio" value="date"/></label>
+                <label>Искать по потреблителю<input name="search-prop" type="radio" /></label>
+                <label>Искать по дате<input name="search-prop" type="radio" /></label>
             </form>
+
+            <div class="customer-search" id="customer-search">
+                <form>
+                    <h1>Поиск по потребителю</h1>
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" />
+                    <label for="surname">Фамилия:</label>
+                    <input type="text" id="surname" name="surname" />
+                </form>
+            </div>
+
+            <div class="date-search" id="date-search">
+                <form>
+                    <h1>Поиск по дате</h1>
+                    <label for="date">Дата: </label>
+                    <input type="date" id="date" name="date" />
+                </form>
+            </div>
+
+            <div class="search-btn" id="search-btn">
+                <button>Найти</button>
+            </div>
+
         </div>
         <div class="search-result-container">
-            <ul id="Orders-list">
-
+            <ul id="orders-list">
             </ul>
         </div>
     </div>
+    <script src="js/site.js"></script>
 </body>
 </html>

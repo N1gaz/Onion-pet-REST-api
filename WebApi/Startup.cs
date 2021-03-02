@@ -5,7 +5,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Application;
 using Persistence;
-using System.Text.Json;
 
 namespace WebApi
 {
