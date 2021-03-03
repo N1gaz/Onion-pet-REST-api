@@ -24,10 +24,6 @@ namespace Application.Features.ProductFeatures.Queries.Orders
             public async Task<IEnumerable<Order>> Handle(GetOrdersByCustomerIdQuery request, CancellationToken cancellationToken)
             {
                 var ordersList = await _context.Orders.Where(a => a.CustomerId == request.Id).ToListAsync();
-                if (ordersList == null)
-                {
-                    return null;
-                }
                 return ordersList.AsReadOnly();
             }
         }

@@ -8,26 +8,25 @@
 <body>
     <div class="container-body-content">
         <div class="search-form-container">
-            <form>
-                <label>Искать по потреблителю<input name="search-prop" type="radio" /></label>
-                <label>Искать по дате<input name="search-prop" type="radio" /></label>
+            <form id="switchType">
+                <label for="radioCustomer">Искать по потреблителю</label>
+                <input name="search-prop" type="radio" id="radioCustomer" value="radioCustomer" />
+                <label for="radioDate">Искать по дате</label>
+                <input name="search-prop" type="radio" id="radioDate" />
             </form>
 
-            <div class="customer-search" id="customer-search">
-                <form>
+            <div class="customer-search" id="customerSearch">
+                <form id="customerSearchForm">
                     <h1>Поиск по потребителю</h1>
-                    <label for="name">Имя:</label>
-                    <input type="text" id="name" name="name" />
-                    <label for="surname">Фамилия:</label>
-                    <input type="text" id="surname" name="surname" />
+                    <input type="text" id="name" name="name" placeholder="Имя"/>
+                    <input type="text" id="surname" name="surname" placeholder="Фамилия"/>
                 </form>
             </div>
 
-            <div class="date-search" id="date-search">
-                <form>
+            <div class="date-search" id="dateSearch">
+                <form id="dateSearchForm">
                     <h1>Поиск по дате</h1>
-                    <label for="date">Дата: </label>
-                    <input type="date" id="date" name="date" />
+                    <input type="text" id="date" name="date" placeholder="Дата" onfocus="(this.type='date')"/>
                 </form>
             </div>
 
@@ -37,10 +36,13 @@
 
         </div>
         <div class="search-result-container">
-            <ul id="orders-list">
-            </ul>
+            <table class="table table-condensed table-striped  col-md-6">
+                <thead><tr><th>Id</th><th>Дата</th><th>Цена</th><th>Id Покупателя</th><th>Имя покупателя</th><th>Фамилия покупателя</th></tr></thead>
+                <tbody>
+                </tbody>
+            </table>
         </div>
     </div>
-    <script src="js/site.js"></script>
+    <script src="js/site.js" defer></script>
 </body>
 </html>

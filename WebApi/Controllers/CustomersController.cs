@@ -19,5 +19,17 @@ namespace WebApi.Controllers
         {
             return Ok(await Mediator.Send(new GetAllCustomersQuery()));
         }
+
+        [HttpGet("{id:int}")]
+        public async Task<IActionResult> GetCustomerById(int id)
+        {
+            return Ok(await Mediator.Send(new GetCustomerByIdQuery { Id = id }));
+        }
+
+        [HttpGet("{name}-{surname}")]
+        public async Task<IActionResult> GetCustomersByNameAndSurname(string name, string surname)
+        {
+            return Ok(await Mediator.Send(new GetCustomersByNameAndSurnameQuery { Name = name, Surname = surname }));
+        }
     }
 }

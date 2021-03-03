@@ -16,9 +16,9 @@ namespace WebApi.Controllers
         protected IMediator Mediator => _mediator ??= HttpContext.RequestServices.GetService<IMediator>();
 
         [HttpGet]
-        public async Task<IActionResult> GetAllOrders()
+        public async Task<JsonResult> GetAllOrders()
         {
-            return Ok(await Mediator.Send(new GetAllOrdersQuery()));
+            return new JsonResult(Ok(await Mediator.Send(new GetAllOrdersQuery())));
         }
 
         [HttpGet("{id:int}")]

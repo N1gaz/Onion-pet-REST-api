@@ -10,6 +10,7 @@ namespace Application.Features.ProductFeatures.Queries.Orders
 {
     public class GetAllOrdersQuery : IRequest<IEnumerable<Order>>
     {
+
         public class GetAllOrdersQueryHandler : IRequestHandler<GetAllOrdersQuery, IEnumerable<Order>>
         {
             private readonly IApplicationContext _context;
@@ -22,10 +23,6 @@ namespace Application.Features.ProductFeatures.Queries.Orders
             public async Task<IEnumerable<Order>> Handle(GetAllOrdersQuery request, CancellationToken cancellationToken)
             {
                 var ordersList = await _context.Orders.ToListAsync();
-                if (ordersList == null)
-                {
-                    return null;
-                }
                 return ordersList.AsReadOnly();
             }
         }

@@ -26,11 +26,6 @@ namespace Application.Features.ProductFeatures.Queries.Orders
             public async Task<IEnumerable<Order>> Handle(GetOrdersByDateQuery request, CancellationToken cancellationToken)
             {
                 var ordersList = await _context.Orders.Where(a => a.OrderDate.Date.Equals(request.DateTime.Date)).ToListAsync();
-                if (ordersList == null)
-                {
-                    return null;
-                }
-
                 return ordersList.AsReadOnly();
             }
         }

@@ -3,11 +3,40 @@
     padding:0;
 }
 
+*, a:focus {
+    outline: none;
+}
+
 body {
+    background-color: bisque;
+}
+
+.search-form-container{
+
+}
+
+.search-form-container form label{
+    margin-right: 1px;
+}
+
+.search-form-container form input{
+    margin-right: 10px;
+}
+
+input{
+    border-radius: 10px;
+}
+
+input[type=radio]{
+
+}
+
+button{
+    border-radius: 10px;
 }
 
 .customer-search {
-    display:none;
+    display: none;
 }
 
 .date-search{
